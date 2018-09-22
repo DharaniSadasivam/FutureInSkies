@@ -21,6 +21,7 @@ class RocketLaunch: NSObject, Mappable {
     var lauchSiteName = ""
     var links = Links()
     var details = ""
+
     
     required init?(map: Map) {
         super.init()

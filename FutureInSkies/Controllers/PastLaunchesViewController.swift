@@ -11,13 +11,16 @@ import ObjectMapper
 import SDWebImage
 
 class PastLaunchesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    //MARK:- Initialization
     var tableView = UITableView()
     var launches = [RocketLaunch]()
     
+    //MARK:- Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.topItem?.title = "PAST LAUNCHES"
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.03529411765, green: 0.6392156863, blue: 0.6666666667, alpha: 1)
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         tableView = UITableView(frame: view.frame, style: .plain)
         tableView.backgroundColor = .white
         tableView.delegate = self
@@ -26,12 +29,7 @@ class PastLaunchesViewController: UIViewController, UITableViewDataSource, UITab
         view.addSubview(tableView)        
         getLaunches()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
-
+    
     //MARK:- UITableViewDelegate & UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        return self.launches.count
@@ -50,13 +48,19 @@ class PastLaunchesViewController: UIViewController, UITableViewDataSource, UITab
         return 80.0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vC = LaunchDetailViewController()
+        vC.launch = launches[indexPath.row]
+        navigationController?.pushViewController(vC, animated: true)
+    }
+    
+    
+    //MARK:- API Call
     func getLaunches() {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
         let urlString = "https://api.spacexdata.com/v2/launches"
-        
-        
         if let url = URL(string: urlString) {
             Utils.showHUD(view: self.view)
             let task = session.dataTask(with: url, completionHandler: {

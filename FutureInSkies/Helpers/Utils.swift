@@ -36,9 +36,25 @@ class Utils: NSObject {
         MBProgressHUD.hide(for: view, animated: true)
     }
     
-    func setNavigationBarWithTitle(title: String, vC: UIViewController) {
-        let navBar: UINavigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: vC.view.frame.width, height: 64.0))
-        
-//        
+    class func isValidForUrl(urlString: String) -> Bool {
+        if (urlString.hasPrefix("http") || urlString.hasPrefix("https")) {
+            return true
+        }
+        return false
+    }
+    
+    class func openUrl(url: String?) {
+        if var urlString = url, !urlString.isEmpty {
+            if !isValidForUrl(urlString: urlString) {
+                urlString = "http://\(urlString)"
+            }
+            
+            let url = URL(string: urlString)!
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 }

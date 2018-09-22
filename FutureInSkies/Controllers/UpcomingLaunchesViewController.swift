@@ -49,6 +49,12 @@ class UpcomingLaunchesViewController: UIViewController, UITableViewDelegate, UIT
         return 80.0
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vC = LaunchDetailViewController()
+        vC.launch = upcomingLanuches[indexPath.row]
+        navigationController?.pushViewController(vC, animated: true)
+    }
+    
     func getUpcomingLaunches() {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)

@@ -12,7 +12,8 @@
 		041983C721563D3300919E99 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983C621563D3300919E99 /* TabbarViewController.swift */; };
 		041983C921563F0400919E99 /* UpcomingLaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983C821563F0400919E99 /* UpcomingLaunchesViewController.swift */; };
 		041983CB2156553300919E99 /* PastLaunchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983CA2156553300919E99 /* PastLaunchesViewController.swift */; };
-		041983CD21565AC600919E99 /* LauchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983CC21565AC600919E99 /* LauchDetailViewController.swift */; };
+		041983CD21565AC600919E99 /* LaunchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983CC21565AC600919E99 /* LaunchDetailViewController.swift */; };
+		041983CF2156890B00919E99 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041983CE2156890B00919E99 /* String+Extensions.swift */; };
 		047536232154A99400E02C2E /* RocketLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047536222154A99400E02C2E /* RocketLaunch.swift */; };
 		047FAA7F215367A6004093F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FAA7E215367A6004093F9 /* AppDelegate.swift */; };
 		047FAA84215367A6004093F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 047FAA82215367A6004093F9 /* Main.storyboard */; };
@@ -32,7 +33,8 @@
 		041983C621563D3300919E99 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		041983C821563F0400919E99 /* UpcomingLaunchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingLaunchesViewController.swift; sourceTree = "<group>"; };
 		041983CA2156553300919E99 /* PastLaunchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PastLaunchesViewController.swift; sourceTree = "<group>"; };
-		041983CC21565AC600919E99 /* LauchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchDetailViewController.swift; sourceTree = "<group>"; };
+		041983CC21565AC600919E99 /* LaunchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchDetailViewController.swift; sourceTree = "<group>"; };
+		041983CE2156890B00919E99 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		047536222154A99400E02C2E /* RocketLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketLaunch.swift; sourceTree = "<group>"; };
 		047FAA7B215367A6004093F9 /* FutureInSkies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FutureInSkies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		047FAA7E215367A6004093F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				041983C42156380600919E99 /* UIFont+Extension.swift */,
+				041983CE2156890B00919E99 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -90,7 +93,7 @@
 				041983CA2156553300919E99 /* PastLaunchesViewController.swift */,
 				041983C621563D3300919E99 /* TabbarViewController.swift */,
 				041983C821563F0400919E99 /* UpcomingLaunchesViewController.swift */,
-				041983CC21565AC600919E99 /* LauchDetailViewController.swift */,
+				041983CC21565AC600919E99 /* LaunchDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -280,7 +283,8 @@
 				047536232154A99400E02C2E /* RocketLaunch.swift in Sources */,
 				047FAA9421537FCE004093F9 /* LaunchesListTableViewCell.swift in Sources */,
 				041983C12156291D00919E99 /* Utils.swift in Sources */,
-				041983CD21565AC600919E99 /* LauchDetailViewController.swift in Sources */,
+				041983CD21565AC600919E99 /* LaunchDetailViewController.swift in Sources */,
+				041983CF2156890B00919E99 /* String+Extensions.swift in Sources */,
 				041983CB2156553300919E99 /* PastLaunchesViewController.swift in Sources */,
 				04E8C45D2153FA1F00573C90 /* NetworkManager.swift in Sources */,
 				047FAA7F215367A6004093F9 /* AppDelegate.swift in Sources */,
